@@ -1,0 +1,82 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>Man page of hudxhumans</TITLE>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</HEAD><BODY>
+<H1>hudxhumans</H1>
+Section: Tools (1)<BR>Updated: 0.0.1<BR><A HREF="#index">Index</A>
+<A HREF="/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+<P>
+
+hudxhumans - A tool to differ between humans and bots.
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNTAX</H2>
+
+<P>
+
+hudxhumans <I>&lt;log file&gt;</I> {<I>--by-session</I>|<I>--by-ip</I>}
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<P>
+
+The script works as follow: We, the humans, are clumsy. The script seeks for SUPR and BACKSPACE characters in the executed commands. The script also checks if the intruder tried to change the window size.
+<A NAME="lbAE">&nbsp;</A>
+<H2>EXAMPLES</H2>
+
+<P>
+
+$ ./hudxhumans log.txt --by-session
+<P>
+
+Typo error filter: Session with id 2952 opened by a human
+<P>
+
+1 human session(s) total
+<P>
+
+$ ./hudxhumans log.txt --by-filter
+<P>
+
+Typo error filter: Human detected at 81.33.84.225 (ES, Spain)
+<P>
+
+1 human(s) total
+<A NAME="lbAF">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+<P>
+
+Chris Pro&lt;
+<A NAME="lbAG">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<P>
+
+<A HREF="/cgi-bin/man/man2html?1+hudxreport">hudxreport</A>(1) <A HREF="/cgi-bin/man/man2html?1+hudxreport-filter">hudxreport-filter</A>(1) <A HREF="/cgi-bin/man/man2html?1+hudxhumans">hudxhumans</A>(1)
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNTAX</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">EXAMPLES</A><DD>
+<DT><A HREF="#lbAF">AUTHORS</A><DD>
+<DT><A HREF="#lbAG">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+
+</BODY>
+</HTML>

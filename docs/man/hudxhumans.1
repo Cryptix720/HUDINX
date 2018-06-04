@@ -1,0 +1,29 @@
+.TH "hudxhumans" "1" "0.0.1" "Chris Pro" "Tools"
+.SH "NAME"
+.LP 
+hudxhumans \- A tool to differ between humans and bots.
+.SH "SYNTAX"
+.LP 
+hudxhumans \fI<log file>\fP {\fI\-\-by\-session\fP|\fI\-\-by\-ip\fP}
+.SH "DESCRIPTION"
+.LP 
+The script works as follow: We, the humans, are clumsy. The script seeks for SUPR and BACKSPACE characters in the executed commands. The script also checks if the intruder tried to change the window size.
+.SH "EXAMPLES"
+.LP 
+$ ./hudxhumans log.txt \-\-by\-session
+.LP 
+Typo error filter: Session with id 2952 opened by a human
+.LP 
+1 human session(s) total
+.LP .BR 
+$ ./hudxhumans log.txt \-\-by\-filter
+.LP 
+Typo error filter: Human detected at 81.33.84.225 (ES, Spain)
+.LP 
+1 human(s) total
+.SH "AUTHORS"
+.LP 
+
+.SH "SEE ALSO"
+.LP 
+hudxreport(1) hudxreport\-filter(1) kip2country(1)

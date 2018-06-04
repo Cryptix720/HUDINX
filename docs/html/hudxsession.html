@@ -1,0 +1,114 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML><HEAD><TITLE>Man page of hudxreport</TITLE>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</HEAD><BODY>
+<H1>hudxreport</H1>
+Section: Reports (1)<BR>Updated: 0.0.1<BR><A HREF="#index">Index</A>
+<A HREF="/cgi-bin/man/man2html">Return to Main Contents</A><HR>
+
+<A NAME="lbAB">&nbsp;</A>
+<H2>NAME</H2>
+
+<P>
+
+hudxreport - Generate reports from the Kojoney Honeypot log files.
+<A NAME="lbAC">&nbsp;</A>
+<H2>SYNTAX</H2>
+
+<P>
+
+hudxreport &lt;<I>log file</I>&gt; &lt;<I>traceroute</I>&gt; &lt;<I>nmap</I>&gt; &lt;<I>country</I>&gt;
+<BR>
+
+<A NAME="lbAD">&nbsp;</A>
+<H2>DESCRIPTION</H2>
+
+<P>
+
+hudxreport is a shell script to generate plain text reports from the Kojoney Honeypot log files. The generated reports includes statistics about successfull and unsuccessfull logons logons with null passwords X11 forward requests, commands executeds when connected to the fake shell, intruder's ip addresses and country, etc... 
+<P>
+
+Report is printed to STDOUT.
+<A NAME="lbAE">&nbsp;</A>
+<H2>OPTIONS</H2>
+
+<P>
+
+<DL COMPACT>
+<DT><B>traceroute</B><DD>
+Print the route packets take to network host. Possible values are 0 (disabled) and 1 (enabled).
+<DT><B>nmap</B><DD>
+Print nmap output take to network host. Possible values are 0 (disable) and 1 (enabled).
+<DT><B>country</B><DD>
+Resolve intruder's country using kip2country tool. Possible values are 0 (disable) and 1 (enabled).
+</DL>
+<A NAME="lbAF">&nbsp;</A>
+<H2>EXAMPLES</H2>
+
+<P>
+
+The following are examples of how is the correct way to run the tool:
+<P>
+
+# hudxreport /var/log/honeypot.log
+<DL COMPACT>
+<DT><DD>
+Generates a <B>normal</B> report without traceroute and nmap output and without ip address to host resolution.
+</DL>
+<P>
+
+# hudxreport /var/log/honeypot.log 0 0 1
+<DL COMPACT>
+<DT><DD>
+Generates a <B>normal</B> report without traceroute and nmap output but with ip address to host resolution.
+</DL>
+<P>
+
+# hudxreport /var/log/honeypot.log 1 0 1
+<DL COMPACT>
+<DT><DD>
+Generates a report with traceroute output, without nmap output and with ip address to host resolution.
+</DL>
+<A NAME="lbAG">&nbsp;</A>
+<H2>FILES</H2>
+
+<P>
+
+<I>/var/log/honeypot.log</I> - Common path to the Koret Honeypot log file.
+<A NAME="lbAH">&nbsp;</A>
+<H2>AUTHORS</H2>
+
+<P>
+
+Chris Pro &lt;
+<A NAME="lbAI">&nbsp;</A>
+<H2>SEE ALSO</H2>
+
+<P>
+
+<A HREF="/cgi-bin/man/man2html?1+hudxreport">hudxreport</A>(1) <A HREF="/cgi-bin/man/man2html?1+hudxreport-filter">hudxreport-filter</A>(1) <A HREF="/cgi-bin/man/man2html?1+hudxhumans">hudxhumans</A>(1)
+<P>
+
+<HR>
+<A NAME="index">&nbsp;</A><H2>Index</H2>
+<DL>
+<DT><A HREF="#lbAB">NAME</A><DD>
+<DT><A HREF="#lbAC">SYNTAX</A><DD>
+<DT><A HREF="#lbAD">DESCRIPTION</A><DD>
+<DT><A HREF="#lbAE">OPTIONS</A><DD>
+<DT><A HREF="#lbAF">EXAMPLES</A><DD>
+<DT><A HREF="#lbAG">FILES</A><DD>
+<DT><A HREF="#lbAH">AUTHORS</A><DD>
+<DT><A HREF="#lbAI">SEE ALSO</A><DD>
+</DL>
+<HR>
+This document was created by
+<A HREF="/cgi-bin/man/man2html">man2html</A>,
+using the manual pages.<BR>
+
+</BODY>
+</HTML>

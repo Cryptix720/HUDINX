@@ -1,0 +1,40 @@
+#! /bin/sh
+set -e
+
+# /etc/init.d/ssh: start and stop the  honeypot for the "secure shell(tm)" protocol
+
+test -x hudin xd || exit 0
+
+case "$1" in
+  start)
+        echo -n "Starting Honeypot: hudinx"
+	/usr/bin/hudinxd 2>&1 >/dev/null&
+        echo "."
+	;;
+  stop)
+        echo -n "Stopping  Honeypot: hudinx"
+	kill `ps aux | grep hudinx | grep -v grep | awk '{ print $2 }'`
+        echo "."
+	;;
+
+  kill)
+        echo -n "Killing  Honeypot: hudinx"
+	kill -9 `ps aux | grep /usr/bin/hudinxd | grep -v grep | awk '{ print $2 }'`
+        echo "."
+	;;
+
+  status)
+	value=`ps aux | grep /usr/bin/hudinxd | grep -v grep | wc -l`
+
+	if [ $value -eq 0 ]; then
+		echo "Server is stopped."
+	else
+		echo "Server is up and running."
+	fi
+	;;
+  *)
+	echo "Usage: /init.d/hudinx {start|stop|kill|status}"
+	exit 1
+esac
+
+exit 0

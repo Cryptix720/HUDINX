@@ -52,7 +52,7 @@ LAUNCH.sh is a simple shell script that runs hudinx in the background using twis
 
 `twistd -y hudinx.tac -n`
 
-By default Hudinx listens for ssh connections on port 3131. You can change this, but do not change it to 22 as it requires root privileges. Use port forwarding instead. (More info: [MakinghudinxReachable](https://github.com/desaster/hudinx/wiki/Making-hudinx-Reachable)).
+By default Hudinx listens for ssh connections on port 3131. You can change this, but do not change it to 22 as it requires root privileges. Use port forwarding instead.
 
 Files of interest:
 
@@ -65,8 +65,5 @@ Files of interest:
 * fs.pickle - fake filesystem
 * honeyfs/ - file contents for the fake filesystem - feel free to copy a real system here
 
-## Is it secure?
-
-Maybe. See [FAQ](https://github.com/Cryptix720/hudinx/wiki/FAQ)
 
 

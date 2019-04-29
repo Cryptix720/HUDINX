@@ -30,8 +30,8 @@ then
     . $VENV/bin/activate
 fi
 
-twistd --version
+hudinx --version
 
 echo "Running HUDIX in the background..."
-twistd -y hudinx.tac -l log/hudinx.log -l hudinx.pid
+hudinx -y hudinx.tac -l log/hudinx.log -l hudinx.pid
 touch  log/{ssh,ftp,telnet}-pot.log

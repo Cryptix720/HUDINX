@@ -48,11 +48,11 @@ Edit hudinx.cfg to your liking and start the honeypot by running:
 
 `./LAUNCH.sh` `./KILL.sh`
 
-LAUNCH.sh is a simple shell script that runs hudinx in the background using twistd. Detailed startup options can be given by running twistd manually. For example, to run hudinx in foreground:
+LAUNCH.sh is a simple shell script that runs hudinx in the background using twistd. Detailed startup options can be given by running hudnix manually. For example, to run hudinx in foreground:
 
-`twistd -y hudinx.tac -n`
+`hudinx -y hudinx.tac -n`
 
-By default Hudinx listens for ssh connections on port 3131. You can change this, but do not change it to 22 as it requires root privileges. Use port forwarding instead.
+By default Hudinx listens for ssh connections on port 3131. You can change this, but do not change it to 22 as it requires root privileges. Use port forwarding instead. (More info: [MakinghudinxReachable](https://github.com/desaster/hudinx/wiki/Making-hudinx-Reachable)).
 
 Files of interest:
 
@@ -65,5 +65,8 @@ Files of interest:
 * fs.pickle - fake filesystem
 * honeyfs/ - file contents for the fake filesystem - feel free to copy a real system here
 
+## Is it secure?
+
+Maybe. See [FAQ](https://github.com/Cryptix720/hudinx/wiki/FAQ)
 
 

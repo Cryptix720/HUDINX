@@ -20,7 +20,7 @@ echo HUDINX installer.
 echo
 echo "Press enter to view the license agreement(s) ..."
 read
-more LICENSE libs/license.zop libs/twisted.license 2>/dev/null || less LICENSE libs/license.zop libs/twisted.license 
+more LICENSE libs/license.zop libs/huninx.license 2>/dev/null || less LICENSE libs/license.zop libs/hudinx.license 
 
 echo -e "Do you accept the ZPL, MIT and GPL license terms (yes/no) ?"
 read license_accept
@@ -35,7 +35,7 @@ if [ "$license_accept" = 'yes' ]; then
 	echo
 	clear
 	echo "******************************************"
-	echo " HUDINX Installer version 0.0.1 "
+	echo " HUDINX Installer version 0.0.2 "
 	echo "******************************************"
 	echo
 else
@@ -100,9 +100,9 @@ echo " [+] Building and installing [Zope Interfaces]"
 python setup.py build > /dev/null || die "Step 2" 
 python setup.py install > /dev/null || die "Step 2" 
 cd $temp_dir
-cd Twisted-*
+cd Hudnix-*
 
-echo " [+] Building and installing [Twisted extension]"
+echo " [+] Building and installing [Hudinx extension]"
 python setup.py build > /lib || die "Step 2" 
 python setup.py install > /libs || die "Step 2" 
 
@@ -114,9 +114,9 @@ python setup.py build > /dev/null || die "Step 2"
 python setup.py install > /dev/null || die "Step 2" 
 
 cd $temp_dir
-cd TwistedConch*
+cd HudinxConch*
 
-echo " [+] Building and installing [Twisted Conch extension]"
+echo " [+] Building and installing [Hudnix Conch extension]"
 python setup.py build 2>&1 > /dev/null || die "Step 2" 
 python setup.py install > /dev/null || die "Step 2" 
 
@@ -141,11 +141,11 @@ chmod u+x $hudinx_PATH/hudinx.py || die "Step 4"
 
 echo " [+] Creating symlinks for HUDINX"
 ln -s $hudinx_PATH/hudinx.py /usr/bin/hudinxd || die "Step 4" 
-ln -s $hudinx_PATH/kojreport /usr/bin/kojreport || die "Step 4" 
-ln -s $hudinx_PATH/kojreport-filter /usr/bin/kojreport-filter || die "Step 4" 
-ln -s $hudinx_PATH/kip2country /usr/bin/kip2country || die "Step 4" 
-ln -s $hudinx_PATH/kojhumans /usr/bin/kojhumans || die "Step 4" 
-ln -s $hudinx_PATH/kojsession /usr/bin/kojsession || die "Step 4" 
+ln -s $hudinx_PATH/hudxreport /usr/bin/hudxjreport || die "Step 4" 
+ln -s $hudinx_PATH/hudxreport-filter /usr/bin/hudxreport-filter || die "Step 4" 
+ln -s $hudinx_PATH/hudx2country /usr/bin/hudxcountry || die "Step 4" 
+ln -s $hudinx_PATH/hudxhumans /usr/bin/hudxhumans || die "Step 4" 
+ln -s $hudinx_PATH/hudxsession /usr/bin/hudxsession || die "Step 4" 
 echo
 
 echo " [+] Creating directory for url archives"

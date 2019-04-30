@@ -29,7 +29,7 @@ Software required:
 * Zope Interface
 
 
-See Wiki for some installation instructions.
+Create Wiki for some installation instructions!
 
 ## How to install it?
 

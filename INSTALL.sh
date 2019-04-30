@@ -35,7 +35,7 @@ if [ "$license_accept" = 'yes' ]; then
 	echo
 	clear
 	echo "******************************************"
-	echo " HUDINX Installer version 0.0.2 "
+	echo " HUDINX Installer version 1.0.2 "
 	echo "******************************************"
 	echo
 else
